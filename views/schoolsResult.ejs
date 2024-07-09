@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>School Data</title>
+</head>
+<body>
+  <h1>List of Schools</h1>
+  <% if (!filteredResults[0]) { %>
+   <p> No Schools Found</p>
+  <% } else { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>Board</th>
+          <th>Type</th>
+          <th>Fees (Primary)</th>
+          <th>Fees (Secondary)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (const school of filteredResults) { %>
+          <tr>
+            <td><%= school.name %></td>
+            <td><%= school.city %></td>
+            <td><%= school.board %></td>
+            <td><%= school.type %></td>
+            <td><%= school['annual-fees']['primary'] %></td>
+            <td><%= school['annual-fees']['secondary'] %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  <% } %>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Select Schools</title>
+  </head>
+  <body>
+    <h1>Filter Schools</h1>
+    <form action="/schools" method="POST">
+      <label for="city">City:</label>
+      <select name="city" id="city">
+        <option value="">All Cities</option>
+        <option value="Kolkata"> Kolkata </option>
+        <option value="Bangalore"> Bangalore </option>
+        <option value="Mumbai"> Mumbai </option>
+    </select>
+    <br>
+    <br>
+      <label for="type"> Type: </label>
+      <select name="type" id="type">
+        <option value=""> All </option>
+        <option value="Co-ed"> Co-ed </option>
+        <option value="Girls"> Girls </option>
+        <option value="Boys"> Boys </option>
+      </select>
+    <br>
+    <br>
+      <label for="board"> Board: </label>
+      <select name="board" id="board">
+        <option value=""> All </option>
+        <option value="CBSE"> CBSE </option>
+        <option value="ICSE"> ICSE </option>
+      </select>
+    <br>
+    <br>
+      <button type="submit"> Find </button>
+    </form>
+  </body>
+</html>

@@ -15,11 +15,8 @@ router.post('/', async (req, res) => {
             userType: req.body.user
         };
 
-        //console.log(data.username);
-
         //check if user exists already
         const existingUser = await User.find({username: data.username});
-        //console.log(existingUser);
         if(existingUser[0]){
             res.render('signup', {error: 'Username taken, try another'});
         }
@@ -37,7 +34,6 @@ router.post('/', async (req, res) => {
             else if(data.userType == 'teacher'){
                 res.render('teacherHome');
             }
-            //console.log(savedUser);
         }
     }
     catch(err){
