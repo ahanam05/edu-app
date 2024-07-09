@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Data</title>
+</head>
+<body>
+  <h1>List of Teachers</h1>
+  <% if (!filteredResults[0]) { %>
+   <p> No Teachers Found</p>
+  <% } else { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Grade</th>
+          <th>Subject</th>
+          <th>YOE</th>
+          <th>Monthly Fees</th>
+          <th>Mode</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (const teacher of filteredResults) { %>
+          <tr>
+            <td><%= teacher.name %></td>
+            <td><%= teacher.grade %></td>
+            <td><%= teacher.subject %></td>
+            <td><%= teacher.yoe %></td>
+            <td><%= teacher.fees %></td>
+            <td><%= teacher.mode %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  <% } %>
+</body>
+</html>
