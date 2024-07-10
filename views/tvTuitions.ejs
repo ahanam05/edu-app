@@ -1,1 +1,54 @@
-Teacher Form to Offer Tuitions
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Register Tuition </title>
+</head>
+
+<body>
+    <% if (locals.message) { %>
+        <p>
+            <%= locals.message %>
+        </p>
+        <% } else { %>
+            <h2> Enter Your Details </h2>
+            <form action="teachTuitions" method="POST">
+                <label for="name"> Name: </label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <br><br>
+                <label for="grade"> Grade: </label>
+                <select name="grade" id="grade">
+                    <option value="9"> 9 </option>
+                    <option value="10"> 10 </option>
+                    <option value="11"> 11 </option>
+                    <option value="12"> 12 </option>
+                </select>
+                <br><br>
+                <label for="subject"> Subject: </label>
+                <select name="subject" id="subject">
+                    <option value="Physics"> Physics </option>
+                    <option value="Chemistry"> Chemistry </option>
+                    <option value="Math"> Math </option>
+                    <option value="Biology"> Biology </option>
+                    <option value="English"> English </option>
+                </select>
+                <br><br>
+                <label for="yoe"> YOE: </label>
+                <input type="text" id="yoe" name="yoe" placeholder="Enter your years of experience" required>
+                <br><br>
+                <label for="fees"> Monthly Fees: </label>
+                <input type="text" id="fees" name="fees" placeholder="Enter monthly fees charged" required>
+                <br><br>
+                <label for="mode"> Mode of Classes: </label>
+                <select name="mode" id="mode">
+                    <option value="Online"> Online </option>
+                    <option value="Offline"> Offline </option>
+                </select>
+                <br><br>
+                <button type="submit"> Submit </button>
+            </form>
+            <% } %>
+
+</body>
+
+</html>
