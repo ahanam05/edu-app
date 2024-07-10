@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
     try{
         await client.connect();
         const database = client.db("EduApp");
-        const collection = database.collection("material");
+        const collection = database.collection("materials");
 
         const gradeFilter = req.body.grade;
         const subjectFilter = req.body.subject;

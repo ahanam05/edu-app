@@ -25,6 +25,7 @@ router.post('/', async (req, res) => {
         res.render('tvTuitions', {message});
     }catch(err){
         console.log('An error occurred', err);
+        res.status(500).send('Error');
     }
 })
 

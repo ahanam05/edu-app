@@ -1,1 +1,48 @@
-Teacher Form to Add Material
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Add Material </title>
+</head>
+
+<body>
+    <% if (locals.message) { %>
+        <p>
+            <%= locals.message %>
+        </p>
+        <% } else { %>
+            <h2> Add Study Material </h2>
+            <form action="teachMaterial" method="POST">
+                <label for="title"> Book Title: </label>
+                <input type="text" id="title" name="title" placeholder="Enter title of book" required>
+                <br><br>
+                <label for="author"> Author: </label>
+                <input type="text" id="author" name="author" placeholder="Enter author of book" required>
+                <br><br>
+                <label for="subject"> Subject: </label>
+                <select name="subject" id="subject">
+                    <option value="Physics"> Physics </option>
+                    <option value="Chemistry"> Chemistry </option>
+                    <option value="Math"> Math </option>
+                    <option value="Biology"> Biology </option>
+                    <option value="English"> English </option>
+                </select>
+                <br><br>
+                <label for="grade"> Grade: </label>
+                <select name="grade" id="grade">
+                    <option value="9"> 9 </option>
+                    <option value="10"> 10 </option>
+                    <option value="11"> 11 </option>
+                    <option value="12"> 12 </option>
+                </select>
+                <br><br>
+                <label for="link"> Link: </label>
+                <input type="text" id="link" name="link" placeholder="Link to buy textbook" required>
+                <br><br>
+                <button type="submit"> Submit </button>
+            </form>
+            <% } %>
+
+</body>
+
+</html>
