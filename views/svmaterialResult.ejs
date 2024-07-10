@@ -1,1 +1,36 @@
-Student Result of Material
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Material</title>
+</head>
+<body>
+  <h1>List of Material</h1>
+  <% if (!filteredResults[0]) { %>
+   <p> No Material Found</p>
+  <% } else { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Subject</th>
+          <th>Grade</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (const material of filteredResults) { %>
+          <tr>
+            <td><%= material.title %></td>
+            <td><%= material.author %></td>
+            <td><%= material.subject %></td>
+            <td><%= material.grade %></td>
+            <td> <a href=<%= material.link %> target="_blank"> Link </a></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  <% } %>
+</body>
+</html>

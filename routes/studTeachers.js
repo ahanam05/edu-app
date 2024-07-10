@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 const router = express.Router();
 
 const uri = "mongodb+srv://ahanam05:dha2005nu@cluster0.hlxuyz8.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const client = new MongoClient(uri);
 
 router.get('/', (req, res) => {
     res.render('svfilterTeachers');
