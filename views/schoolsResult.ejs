@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>School Data</title>
+  <link rel="stylesheet" href="studentstyle.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+  </style>
 </head>
+
 <body>
-  <h1>List of Schools</h1>
-  <% if (!filteredResults[0]) { %>
-   <p> No Schools Found</p>
-  <% } else { %>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>City</th>
-          <th>Board</th>
-          <th>Type</th>
-          <th>Fees (Primary)</th>
-          <th>Fees (Secondary)</th>
-        </tr>
-      </thead>
-      <tbody>
+  <nav>
+    <ul>
+      <li> <a href='schools'> Schools </a></li>
+      <li> <a href='studTeachers'> Teachers </a></li>
+      <li> <a href='studMaterial'> Study Material </a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>List of Schools</h1>
+    <% if (!filteredResults[0]) { %>
+      <p> No Schools Found</p>
+      <% } else { %>
+
         <% for (const school of filteredResults) { %>
-          <tr>
-            <td><%= school.name %></td>
-            <td><%= school.city %></td>
-            <td><%= school.board %></td>
-            <td><%= school.type %></td>
-            <td><%= school['annual-fees']['primary'] %></td>
-            <td><%= school['annual-fees']['secondary'] %></td>
-          </tr>
-        <% } %>
-      </tbody>
-    </table>
-  <% } %>
+          <div class="result-container">
+            <div class="result">
+              <p>
+                <%= school.name %> <br>
+                <%= school.city %> <br>
+               <%= school.board %> <br>
+                <%= school.type %> <br>
+                fees: <%= school['annual-fees']['primary'] %> /
+               <%= school['annual-fees']['secondary'] %> <br>
+              </p>
+            </div>
+          </div>
+          <% } %>
+
+            <% } %>
+  </main>
+  <footer>
+    <p> contact: +91 87879 12345 | xa.ahana.xa@gmail.com </p>
+  </footer>
 </body>
+
 </html>
