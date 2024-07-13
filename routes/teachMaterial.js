@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
         const newMaterial = new Material(data);
         await newMaterial.save();
 
-        const message = "Successfully added material";
+        const message = "successfully added material!";
         res.render('tvMaterial', {message});
 
     }catch(err){

@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
         const newTeacher = new Teacher(data);
         await newTeacher.save();
 
-        const message = "Successfully registered as a tutor";
+        const message = "successfully registered as a tutor!";
         res.render('tvTuitions', {message});
     }catch(err){
         console.log('An error occurred', err);
