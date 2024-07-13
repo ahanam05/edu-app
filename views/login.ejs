@@ -3,26 +3,30 @@
     <head>
         <title> Login </title>
         <link rel="stylesheet" href="formstyle.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+          </style>
     </head>
     <body>
+        <h1>log in</h1>
         <div class="form-container">
-            <h2>Log In</h2>
-            <% if (locals.error) { %>
-                <p style="color: red;">
-                    <%= locals.error %>
-                </p>
-                <% } %>
+            
             <form action="/login" method="POST">
+                <% if (locals.error) { %>
+                    <p style="color: red;">
+                        <%= locals.error %>
+                    </p>
+                    <% } %>
                 <div class="form-group">
-                    <label for="name"> Username: </label>
-                    <input type="text" id="name" name="username" placeholder="Enter your username:" required autocomplete="off">
+                    <label for="name"> username: </label> <br><br>
+                    <input type="text" id="name" name="username" placeholder="Enter your username:" required autocomplete="off"> <br><br>
                 </div>
-                <div class="form-group">
-                    <label for="password"> Password: </label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <div class="form-group"> 
+                    <label for="password"> password: </label> <br><br>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required> <br><br>
                 </div>
-                <button type="submit" class="submit-btn"> Login </button>
-                <p> Don't have an account? <a href="signup"> Sign up! </a></p>
+                <button type="submit" class="submit-btn"> login </button> <br><br>
+                <p> don't have an account? <a href="signup"> sign up! </a></p> <br><br>
             </form>
         </div>
     </body>

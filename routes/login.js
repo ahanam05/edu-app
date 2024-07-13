@@ -19,7 +19,7 @@ router.post('/login', async (req, res) => {
         const userExists = await User.find({username: req.body.username});
         
         if(!userExists[0]){ 
-            return res.render('login', {error: `User doesn't exist`});
+            return res.render('login', {error: `user doesn't exist`});
         }
 
         const userType = userExists[0].userType;
@@ -37,12 +37,12 @@ router.post('/login', async (req, res) => {
             }
         }
         else{ 
-            return res.render('login', { error: 'Wrong password, try again' });
+            return res.render('login', { error: 'wrong password, try again' });
         }
 
     }catch(err){
         res.send('Wrong Details');
-        res.render('login', { error: 'An error occurred during login' });
+        res.render('login', { error: 'an error occurred during login' });
     }
 })
 

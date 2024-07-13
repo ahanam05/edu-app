@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
         //check if user exists already
         const existingUser = await User.find({username: data.username});
         if(existingUser[0]){
-            res.render('signup', {error: 'Username taken, try another'});
+            res.render('signup', {error: 'username taken, try another'});
         }
         else{
             //hash the password using bcrypt
@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
     }
     catch(err){
         console.log("An error occurred: ", err);
-        res.render('signup', {error: 'Error creating user'});
+        res.render('signup', {error: 'error creating user'});
         //res.status(500).send({ success: false, message: "Error creating user!" });
     }
     

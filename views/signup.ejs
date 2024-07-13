@@ -3,33 +3,33 @@
     <head>
         <title> Sign Up </title>
         <link rel="stylesheet" href="formstyle.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+          </style>
     </head>
     <body>
+        <h1> sign up </h1>
         <div class="form-container">
-            <h2> Sign Up </h2>
-            <% if (locals.error) { %>
-                <p style="color: red;">
-                    <%= locals.error %>
-                </p>
-                <% } %>
+            
             <form action="/signup" method="POST">
+                <% if (locals.error) { %>
+                    <p style="color: red;">
+                        <%= locals.error %>
+                    </p>
+                    <% } %>
                 <div class="form-group">
-                    <label for="name"> Username: </label>
-                    <input type="text" id="name" name="username" placeholder="Enter your username:" required autocomplete="off">
+                    <label for="name"> username: </label> <br><br>
+                    <input type="text" id="name" name="username" placeholder="Enter your username:" required autocomplete="off"> <br><br>
                 </div>
                 <div class="form-group">
-                    <label for="password"> Password: </label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <label for="password"> password: </label> <br><br>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required> <br><br>
                 </div>
-                <div class="form-group">
-                    <p> Are you a: </p>
-                    <input type="radio" id="student" name="user" value="student"> 
-                    <p> Student</p>
-                    <input type="radio" id="teacher" name="user" value="teacher"> 
-                    <p> Teacher</p>
-                </div>
-                <button type="submit" class="submit-btn"> Sign Up </button>
-                <p> Have an account? <a href="login"> Log in! </a></p>
+                <label for="user"> are you a: </label>
+                <input type="radio" id="student" name="user" value="student"> student
+                <input type="radio" id="teacher" name="user" value="teacher"> teacher <br><br>
+                <button type="submit" class="submit-btn"> sign up </button> <br><br>
+                <p> have an account? <a href="login"> log in! </a></p> <br><br>
             </form>
         </div>
     </body>
