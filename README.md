@@ -4,7 +4,7 @@
 
 ### Description 
 
-This web application allows students and teachers to view and manage schools, tutors, and study materials. It provides a user-friendly interface to filter and sort through various educational resources.
+This full-stack web application allows students and teachers to view and manage schools, tutors, and study materials via separate login/signup facilities. It provides a user-friendly interface to filter and sort through various educational resources.
 
 ### Technology Used
 
