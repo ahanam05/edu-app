@@ -8,8 +8,8 @@ This web application allows students and teachers to view and manage schools, tu
 
 ### Technology Used
 
-Frontend: HTML, CSS, JavaScript <br>
-Backend: Express.js <br>
+Frontend: HTML, CSS, JavaScript <br> <br>
+Backend: Express.js <br> <br>
 Database: MongoDB
 
 ### Live
